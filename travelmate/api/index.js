@@ -22,7 +22,7 @@ export const getTripsData = async (
           lang: 'en_US',
         },
         headers: {
-          'X-RapidAPI-Key': `${process.env.EXPO_PUBLIC_TRAVEL_API_KEY}`,
+          'X-RapidAPI-Key': process.env.EXPO_PUBLIC_TRAVEL_API_KEY || '',
           'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com',
         },
       }

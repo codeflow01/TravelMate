@@ -107,7 +107,7 @@ export const ContentPage = () => {
             setTr_longitude(details?.geometry?.viewport?.northeast?.lng);
           }}
           query={{
-            key: `${process.env.EXPO_PUBLIC_GOOGLE_PLACES_API_KEY}`,
+            key: process.env.EXPO_PUBLIC_GOOGLE_PLACES_API_KEY || '',
             language: 'en',
           }}
         />

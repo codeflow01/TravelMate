@@ -108,7 +108,7 @@ If everything is set up *correctly*, Tailwind CSS is ready to use.
      setTr_longitude(details?.geometry?.viewport?.northeast?.lng);
      }}
 query={{
-  key: `${process.env.EXPO_PUBLIC_GOOGLE_PLACES_API_KEY}`,
+  key: process.env.EXPO_PUBLIC_GOOGLE_PLACES_API_KEY || '',
   language: "en",
   }}
 />
@@ -134,7 +134,7 @@ export  default  async  function getTripsData(bl_latitude, tr_latitude, bl_longi
          lang: 'en_US'
       },
       headers: {
-        "X-RapidAPI-Key": `${process.env.EXPO_PUBLIC_TRAVEL_API_KEY}`,
+        "X-RapidAPI-Key": process.env.EXPO_PUBLIC_TRAVEL_API_KEY || '',
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
       },
      }
